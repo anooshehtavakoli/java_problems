@@ -1,5 +1,8 @@
 package arraysandstrings;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 import java.util.Arrays;
 
 /**
@@ -9,8 +12,16 @@ import java.util.Arrays;
  */
 public class Permutation {
 
-    public static void main(String[] args) {
-        System.out.println(permutation("reza", "ezra"));
+    @Test
+    public void testPermutation() {
+        boolean isPermutation = permutation("anoosheh", "noosheah");
+        Assert.assertTrue(isPermutation);
+    }
+
+    @Test
+    public void testNotPermutation() {
+        boolean notPermutation = permutation("anoosheh", "something");
+        Assert.assertFalse(notPermutation);
     }
 
     public static String sort(String string) {
